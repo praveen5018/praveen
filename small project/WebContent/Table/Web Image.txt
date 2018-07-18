@@ -1,0 +1,55 @@
+create database Attribute;
+use Attribute;
+
+create table images(
+id int(11) NOT NULL auto_increment,
+
+iname text,
+icolor text,
+idescription text,
+itype text,
+uses text,
+imagess longblob,
+
+count int(11) default NULL,
+
+binaryimage longtext,
+
+attribute1 text,
+attribute2 text,
+attribute3 text,
+attribute4 text,
+PRIMARY KEY  (id)
+);
+
+
+ select id,iname,icolor,idescription,itype,uses,count from images;
+
+
+CREATE TABLE admin (
+	username VARCHAR(50),
+	password VARCHAR(50)
+) ;
+
+insert into admin values ('admin','admin');
+
+
+CREATE TABLE user (
+	uid INT NOT NULL auto_increment,
+	uname VARCHAR(60),
+	password VARCHAR(60),
+	email VARCHAR(60),
+	mobile VARCHAR(60),
+	location VARCHAR(60),
+	dob VARCHAR(60),
+	address VARCHAR(100),
+	gender VARCHAR(60),
+	pincode VARCHAR(60),
+	sk VARCHAR(60),
+	PRIMARY KEY (uid)
+) ;
+
+ create table search(
+ uname text,
+ keyword text,
+ dt text);
