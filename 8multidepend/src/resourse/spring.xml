@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+           
+          <bean id="hd" class="com.java.hdetails">
+          <property name="haddress" value="Hyderabad"></property>
+          
+          </bean> 
+          
+          <bean id="hd1" class="com.java.hdetails">
+          
+          <property name="haddress" value="Nalgonda"></property>
+          </bean>
+          
+          <bean id="hd2" class="com.java.hdetails">
+          
+          <property name="haddress" value="Suryapet"></property>
+          
+          </bean>
+          
+          <bean id="hn" class="com.java.hospital">
+          <property name="hname">
+          
+          <set>
+          
+          <value>children Hospital</value>
+          
+          <value>Remedy Hospital </value>
+          
+          <value>Ozone Hospital</value>
+          
+          </set>
+          </property>
+          
+          <property name="hdetails">
+          <list>
+          
+          <ref bean="hd"/>
+          
+          <ref bean="hd1"/>
+          
+          <ref bean="hd2"/>
+          
+          </list>
+          
+          </property>
+          
+          </bean>
+          
+           </beans>
